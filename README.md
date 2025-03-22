@@ -1,11 +1,6 @@
-Awesome! Here's a complete and polished `README.md` for your **Shortify** Flask-based URL shortener project, reflecting **all features** you've implemented:
-
----
-
-### ✅ `README.md`
-
-```markdown
 # 🔗 Shortify – Flask URL Shortener
+
+![Shortify UI Screenshot](assets/image.png) <!-- Add a screenshot if you'd like -->
 
 **Shortify** is a modern, minimal, and fully-functional URL shortener built using **Flask** and **MongoDB**. It allows you to shorten URLs, customize short codes, track click counts, and optionally set expiration times.
 
@@ -59,7 +54,7 @@ shortify/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/shortify
+git clone https://github.com/Nuraj250/shortify
 cd shortify
 ```
 
