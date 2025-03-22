@@ -161,5 +161,3 @@ MIT License — use it freely!
 ## 🤝 Contribute
 
 Pull requests and feature ideas are welcome! Drop a ⭐ if you like the project.
-```
-
