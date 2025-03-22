@@ -1,6 +1,6 @@
 # 🔗 Shortify – Flask URL Shortener
 
-![Shortify UI Screenshot](assets/image.png) <!-- Add a screenshot if you'd like -->
+![Shortify UI Screenshot](Screenshot (268).png) <!-- Add a screenshot if you'd like -->
 
 **Shortify** is a modern, minimal, and fully-functional URL shortener built using **Flask** and **MongoDB**. It allows you to shorten URLs, customize short codes, track click counts, and optionally set expiration times.
 
@@ -148,7 +148,7 @@ Returns click stats for a short URL.
 
 ## 📸 UI Preview
 
-![Shortify UI Screenshot](assets/image.png) <!-- Add a screenshot if you'd like -->
+![Shortify UI Screenshot](Screenshot (268).png) <!-- Add a screenshot if you'd like -->
 
 ---
 
@@ -163,11 +163,3 @@ MIT License — use it freely!
 Pull requests and feature ideas are welcome! Drop a ⭐ if you like the project.
 ```
 
----
-
-Let me know if you'd like:
-- A screenshot for the preview?
-- A license file?
-- Docker setup to finish it off?
-
-You're all set to publish this! 🔥
