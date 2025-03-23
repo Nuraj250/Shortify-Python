@@ -1,32 +1,38 @@
-# 🔗 Shortify - Flask URL Shortener
+Awesome! Here's a complete and polished `README.md` for your **Shortify** Flask-based URL shortener project, reflecting **all features** you've implemented:
 
-A simple and clean URL shortener built with **Flask** and **MongoDB**.  
-Generate short links and get redirected instantly — no login required.
+---
+
+### ✅ `README.md`
+
+```markdown
+# 🔗 Shortify – Flask URL Shortener
+
+**Shortify** is a modern, minimal, and fully-functional URL shortener built using **Flask** and **MongoDB**. It allows you to shorten URLs, customize short codes, track click counts, and optionally set expiration times.
 
 ---
 
 ## 🚀 Features
 
-- Shorten long URLs into 6-character short links
-- Auto redirect to the original URL via short link
-- Simple and clean web interface
-- Copy-to-clipboard support
-- Custom 404 page for broken links
-- Fully API-backed for integration
+- 🔗 Shorten long URLs into compact links
+- ✏️ Optional **custom short codes**
+- ⏳ Optional **expiration** (in hours)
+- 📈 Real-time **click tracking**
+- 📋 Copy-to-clipboard button
+- 🎨 Clean, responsive Bootstrap frontend
+- ❌ 404 page for broken links
 
 ---
 
 ## 🧱 Tech Stack
 
-- Python 3.x
-- Flask
-- MongoDB (via PyMongo)
-- Bootstrap (Frontend)
-- JavaScript Fetch API
+- Backend: [Flask](https://flask.palletsprojects.com/)
+- Database: [MongoDB](https://www.mongodb.com/)
+- Frontend: HTML, Bootstrap 5, JavaScript
+- Others: `pymongo`, `python-dotenv`
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
 shortify/
@@ -35,11 +41,11 @@ shortify/
 │   ├── config.py
 │   ├── models.py
 │   ├── routes.py
-│   ├── utils.py
+│   └── utils.py
 ├── templates/
 │   ├── index.html
 │   └── 404.html
-├── static/
+├── static/              # Optional for CSS/JS
 ├── run.py
 ├── requirements.txt
 ├── .env
@@ -50,18 +56,18 @@ shortify/
 
 ## ⚙️ Setup Instructions
 
-### 1. Clone the Repository
+### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/Nuraj250/shortify-flask.git
-cd shortify-flask
+git clone https://github.com/your-username/shortify
+cd shortify
 ```
 
-### 2. Create and Activate Virtual Environment (Optional but Recommended)
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 ```
 
 ### 3. Install Dependencies
@@ -70,9 +76,9 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment Variables
+### 4. Set Up Environment Variables
 
-Create a `.env` file in the root:
+Create a `.env` file in the root directory:
 
 ```env
 MONGO_URI=mongodb://localhost:27017/
@@ -80,47 +86,93 @@ DB_NAME=shortify
 BASE_URL=http://localhost:5000
 ```
 
-Make sure MongoDB is running on your system.
-
-### 5. Run the Application
+### 5. Run the App
 
 ```bash
 python run.py
 ```
 
-Visit: [http://localhost:5000](http://localhost:5000)
+Visit `http://localhost:5000` in your browser 🎉
 
 ---
 
-## 🎯 API Endpoints
+## 📡 API Endpoints
 
-### POST `/shorten`
+### `POST /shorten`
 
-**Request Body:**
+Shortens a URL.
 
+#### Request Body (JSON):
 ```json
 {
-  "url": "https://example.com"
+  "url": "https://example.com/long-url",
+  "custom_code": "mycustomcode",    // optional
+  "expires_in": 24                  // optional (in hours)
 }
 ```
 
-**Response:**
-
+#### Response:
 ```json
 {
-  "short_url": "http://localhost:5000/abc123"
+  "short_url": "http://localhost:5000/mycustomcode",
+  "custom_code": "mycustomcode",
+  "expires_in": 24
 }
 ```
+
+---
+
+### `GET /<short_code>`
+
+Redirects to the original URL, or returns a 404 page if invalid or expired.
+
+---
+
+### `GET /<short_code>/stats`
+
+Returns click stats for a short URL.
+
+#### Response:
+```json
+{
+  "short_code": "abc123",
+  "clicks": 5
+}
+```
+
+---
+
+## 🛠 Future Ideas
+
+- 🔐 Admin dashboard for URL management
+- 📦 Docker support for deployment
+- 📊 Analytics with charts
+- 💬 QR code generation
+
+---
+
+## 📸 UI Preview
+
+![Shortify UI Screenshot](assets/image.png) <!-- Add a screenshot if you'd like -->
 
 ---
 
 ## 📄 License
 
-MIT License
+MIT License — use it freely!
 
 ---
 
-## 🙌 Acknowledgements
+## 🤝 Contribute
 
-Built with ❤️ using Flask and MongoDB.
+Pull requests and feature ideas are welcome! Drop a ⭐ if you like the project.
 ```
+
+---
+
+Let me know if you'd like:
+- A screenshot for the preview?
+- A license file?
+- Docker setup to finish it off?
+
+You're all set to publish this! 🔥
